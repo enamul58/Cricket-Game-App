@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Game App</title>
+  </head>
+  <body>
+    <h1>Bat Ball Strump Game</h1>
+    <button
+      onclick="
+       //claculate random number
+       let randomNumber = Math.random() * 3;
+        let computerPlay;
+        
+        //make computer play state
+        if(randomNumber >= 0 && randomNumber <= 1){
+            computerPlay = 'ball'; 
+        }else if(randomNumber > 1 && randomNumber <= 2){
+            computerPlay = 'bat';
+        }else if(randomNumber > 2 && randomNumber <= 3){
+            computerPlay = 'strump';
+        }
+
+        //result of the match
+        let result;
+        if(computerPlay === 'ball'){
+            result = 'user won the match';
+        }else if(computerPlay === 'bat'){
+            result = `match is tie`;
+        }else {
+            result = 'computer won the match';
+        }
+
+        alert(`
+        User chosen bat.
+        Computer chosen ${computerPlay}. 
+        Result ${result}.`);
+    "
+    >
+      Bat
+    </button>
+    <button
+      onclick="
+       //claculate random number
+       let randomNumberForBall = Math.random() * 3;
+        let computerPlayForBall;
+        
+        //make computer play state
+        if(randomNumberForBall >= 0 && randomNumberForBall <= 1){
+            computerPlayForBall = 'ball'; 
+        }else if(randomNumberForBall > 1 && randomNumberForBall <= 2){
+            computerPlayForBall = 'bat';
+        }else if(randomNumberForBall > 2 && randomNumberForBall <= 3){
+            computerPlayForBall = 'strump';
+        }
+
+        //result of the match
+        let resultForBall;
+        if(computerPlayForBall === 'ball'){
+            resultForBall = `match is tie`
+        }else if(computerPlayForBall === 'bat'){
+            resultForBall = 'computer won the match';
+        }else {
+            resultForBall = 'user won the match';
+        }
+
+        alert(`
+        User chosen ball.
+        Computer chosen ${computerPlayForBall}. 
+        Result ${resultForBall}.`);
+    "
+    >
+      Ball
+    </button>
+    <button
+      onclick="
+       //claculate random number
+        randomNumber = Math.random() * 3;
+        
+        //make computer play state
+        if(randomNumber >= 0 && randomNumber <= 1){
+            computerPlay = 'ball'; 
+        }else if(randomNumber > 1 && randomNumber <= 2){
+            computerPlay = 'bat';
+        }else if(randomNumber > 2 && randomNumber <= 3){
+            computerPlay = 'strump';
+        }
+
+        //result of the match
+        if(computerPlay === 'ball'){
+            result = 'computer won the match';
+        }else if(computerPlay === 'bat'){
+            result = 'user won the match';
+        }else {
+            result = `match is tie`;
+        }
+
+        alert(`
+        User chosen strump.
+        Computer chosen ${computerPlay}. 
+        Result ${result}.`);
+    "
+    >
+      Strump
+    </button>
+  </body>
+</html>
